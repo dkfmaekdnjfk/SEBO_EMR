@@ -18,17 +18,17 @@ div, nav {
     padding: 0;
 }
 #left-sidebar {
-    width: 10%;
+    width: 5%;
     height: 600px;
     background-color: aliceblue;
     float: left;
 }
 #contents {
-    width: 80%;
+    width: 90%;
     float: left;
 }
 #right-sidebar {
-    width: 10%;
+    width: 5%;
     height: 600px;
     background-color: aliceblue;
     float: right;
