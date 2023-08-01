@@ -3,24 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/gpt_style_002.css">
+    <link rel="stylesheet" href="/css/cb_emr_grid_001.css">
     <title>SEBO_EMR</title>
 </head>
 <body>
     <div id="container">
-        <header>
-
+        <header id="header"> 
+            <div id="logo">
+                <a href="#"><h2>세보 전자차트</h2></a>
+            </div>
+            <nav>
+                <ul id="topMenu">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">접수</a></li>
+                    <li><a href="#">예진</a></li>
+                    <li><a href="#">망문문절</a></li>
+                    <li><a href="#">치료</a></li>
+                </ul>
+            </nav>
         </header>
+        <aside id="left-sidebar">
+            <div><h2>사이드바</h2></div>
+        </aside>
         <main class="contents">
             <div id="wrapper_essential">
-
+                <div class="name">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="gender">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="age">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age">
+                </div>
+                <div class="address">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                <div class="phone">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
             </div>
             <div id="wrapper_patient">
-
+                <div class="cheif-complain">
+                    <label for="cheif-complain">Cheif-complain</label>
+                    <input type="text" id="cheif-complain" name="cheif-complain">
+                </div>
+                <div class="onset-date">
+                    <label for="onset-date">Onset Date</label>
+                    <input type="date" id="onset-date" name="onset-date">
+                </div>
+                <div class="present-illness">
+                    <label for="present-illness">Present-illness</label>
+                    <textarea id="present-illness" name="present-illness" rows="12"></textarea>
+                </div>
+                <div class="past-history">
+                    <label for="past-history">Past History</label>
+                    <textarea id="past-history" name="past-history" rows="4"></textarea>
+                </div>
+                <div class="family-history">
+                    <label for="family-history">Family History</label>
+                    <textarea id="family-history" name="family-history" rows="4"></textarea>
+                </div>
+                <div class="social-history">
+                    <label for="social-history">Social History</label>
+                    <textarea id="social-history" name="social-history" rows="4"></textarea>
+                </div>
             </div>
         </main>
+        <aside id="right-sidebar">
+            <div><h2>사이드바</h2></div>
+        </aside>
         <footer>
-            
+            <div><h2>푸터</h2></div>
         </footer>
     </div>
 </body>

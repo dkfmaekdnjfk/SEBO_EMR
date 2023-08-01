@@ -1,0 +1,54 @@
+div, nav {
+    border: solid #000 1px;
+    /* border-radius: 5%; */
+    /* 테두리 구분하기 위해 임시로 둔 스타일 */
+    padding: 1%;
+    margin: 1%;
+}
+
+#container {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    margin: auto;
+}
+#header {
+    width: 100%;
+    height: 10%;
+}
+
+#contents {
+    width: 60%;
+    float: left;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    clear: left;
+}
+
+#logo {
+    background-color: aquamarine;
+}
+nav {
+    background-color: aqua;
+    padding: 0;
+}
+li {
+    border: solid #000 1px;
+    display: inline-block;
+    padding: 1%;
+}
+
+#wrapper_essential {
+    background-color: bisque;
+    display: flex;
+}
+
+#wrapper_patient {
+    background-color: antiquewhite;
+}
+
+
