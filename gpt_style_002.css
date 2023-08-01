@@ -1,0 +1,25 @@
+.form-grid {
+    display: grid;
+    grid-template-areas: 
+        "name gender age address phone"
+        "address-card onset-date . . ."
+        "military-history . past-history family-history social-history";
+    grid-gap: 10px;
+}
+
+.form-grid > div {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.name { grid-area: name; }
+.gender { grid-area: gender; }
+.age { grid-area: age; }
+.address { grid-area: address; }
+.phone { grid-area: phone; }
+.address-card { grid-area: address-card; }
+.onset-date { grid-area: onset-date; }
+.military-history { grid-area: military-history; }
+.past-history { grid-area: past-history; }
+.family-history { grid-area: family-history; }
+.social-history { grid-area: social-history; }
