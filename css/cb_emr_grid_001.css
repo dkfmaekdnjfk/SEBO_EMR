@@ -53,7 +53,8 @@ ul {
 li {
     border: solid #000 1px;
     display: inline-block;
-    padding: 1%;
+    padding: 1%;  
+    margin-right: 10px;  
 }
 
 #wrapper_essential {
@@ -62,8 +63,39 @@ li {
     padding: 0.5%;
 }
 
+.name { grid-area: name; }
+.gender { grid-area: gender; }
+.age { grid-area: age; }
+.address { grid-area: address; }
+.phone { grid-area: phone; }
+.cheif-complain { grid-area: cheif-complain; }
+.onset-date { grid-area: onset-date; }
+.present-illness { grid-area: present-illness; }
+.past-history { grid-area: past-history; }
+.family-history { grid-area: family-history; }
+.social-history { grid-area: social-history; }
+
+#wrapper_essemtial {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    grid-template-areas: 
+      "name gender address"
+      "name age phone"
+    ;
+}
+
 #wrapper_patient {
     background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas: 
+      "cheif-complain cheif-complain onset-date"
+      "present-illness present-illness past-history"
+      "present-illness present-illness family-history"
+      "present-illness present-illness social-history"
+    ;
 }
 
 
