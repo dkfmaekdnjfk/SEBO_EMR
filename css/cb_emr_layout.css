@@ -71,6 +71,7 @@ nav {
 #patientInfoTab {
   width: 100%;
   height: 15%;
+  margin: 10px;
   background-color: #A7B2F2;
 }
 #patientInfoItem {
@@ -95,28 +96,23 @@ nav {
 /* 예진 탭 */
 /* 환자의 정보를 입력하는 폼 탭입니다. */
 #yejinForm {
+  margin: 10px;
   width: 100%;
   height: 85%;
   background-color: #A7B2F2;
 }
-
-.name { grid-area: name; }
-.gender { grid-area: gender; }
-.age { grid-area: age; }
-.address { grid-area: address; }
-.phone { grid-area: phone; }
 .cheif-complain { grid-area: cheif-complain; }
 .onset-date { grid-area: onset-date; }
 .present-illness { grid-area: present-illness; }
 .past-history { grid-area: past-history; }
 .family-history { grid-area: family-history; }
 .social-history { grid-area: social-history; }
-
+/* 환자 정보 폼을 그리드 템플릿으로 제작하기 위해
+전체를 감싸는 wrapper를 생성하였습니다. */
 #wrapper_patient {
-    background-color: antiquewhite;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 250px);
+    grid-template-rows: repeat(4, 200px);
     grid-template-areas: 
       "cheif-complain cheif-complain onset-date"
       "present-illness present-illness past-history"
@@ -124,3 +120,9 @@ nav {
       "present-illness present-illness social-history"
     ;
 }
+#wrapper_patient > div {
+  background-color: #4158D9;
+  border: 1px solid #222;
+  margin: 10px;
+}
+/*  */
