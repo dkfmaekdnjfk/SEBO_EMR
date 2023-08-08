@@ -20,8 +20,51 @@
       </div>
     </header>
     <div id="contents">
-      <div id="patientInfo"></div>
-      <div class="yejinForm"></div>
+      <div id="patientInfoTab">
+        <ul id="patientInfoItem">
+          <li id="patinetInfoName">성함</li>
+          <li id="patientInfoGender">성별</li>
+          <li id="patientInfoAge">나이</li>
+          <li id="patientInfoAddress">주소</li>
+          <li id="patientInfoPhone">전화</li>
+        </ul>
+      </div>
+      <div id="yejinTab">
+        <form id="yejinForm">
+            <div id="wrapper_patient">
+              <div class="cheif-complain">
+                  <label for="cheif-complain">주소증</label>
+                  <textarea type="text" id="cheif-complain" name="cheif-complain" cols="120" rows="15"></textarea>
+              </div>
+              <div class="onset-date">
+                  <label for="onset-date">발병일</label>
+                  <input type="date" id="onset-date" name="onset-date">
+                  <label for="onset-date-word"></label>
+                  <input type="text" id="onset-date-word" name="onset-date-word">
+              </div>
+              <div class="present-illness">
+                  <label for="present-illness">현병력</label>
+                  <textarea id="present-illness" name="present-illness" cols="120" rows="30"></textarea>
+              </div>
+              <div class="past-history">
+                  <label for="past-history">과거력</label>
+                  <textarea id="past-history" name="past-history" cols="50" rows="15"></textarea>
+              </div>
+              <div class="family-history">
+                  <label for="family-history">Family<br>History</label>
+                  <textarea id="family-history" name="family-history" cols="50" rows="15"></textarea>
+              </div>
+              <div class="social-history">
+                  <label for="social-history">가족력</label>
+                  <textarea id="social-history" name="social-history" cols="50" rows="15"></textarea>
+              </div>
+            </div>
+          <div id="buttons">
+              <input type="submit" value="NEXt STEP">
+              <input type="reset" value="RESET">
+          </div>
+        </form>
+      </div>
     </div>
     <footer></footer>
   </div>
