@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>예진</title>
-  <link rel="stylesheet" href="/css/cb_emr_layout.css">
+  <link rel="stylesheet" href="/css/cb_emr_yejin.css">
 </head>
 <body>
   <div id="container">
     <header>
       <div id="logo">
         <a href="cb_emr_layout.html">
-          <h1>세보 전자차트</h1>
+          <h1>세상의 보배</h1>
         </a>
       </div>
       <nav></nav>
@@ -22,6 +22,7 @@
     <div id="contents">
       <div id="patientInfoTab">
         <ul id="patientInfoItem">
+          <!-- 환자정보는 접수에서 가져온 정보를 이곳에 표시해야 함 -->
           <li id="patinetInfoName">성함</li>
           <li id="patientInfoGender">성별</li>
           <li id="patientInfoAge">나이</li>
@@ -32,6 +33,7 @@
       <div id="yejinTab">
         <form id="yejinForm">
             <div id="wrapper_patient">
+              <!-- 주소증은 텍스트를 입력해서 추가할 수 있도록 수정하기 -->
               <div class="cheif-complain">
                   <label for="cheif-complain">주소증</label>
                   <textarea type="text" id="cheif-complain" name="cheif-complain" cols="120" rows="10"></textarea>
@@ -42,6 +44,7 @@
                   <label for="onset-date-word"></label>
                   <textarea id="onset-date-word" name="onset-date-word" cols="35" rows="10"></textarea>
               </div>
+              <!-- 현병력은 주소증의 번호와 그 외의 목록을 연동하기 -->
               <div class="present-illness">
                   <label for="present-illness">현병력</label>
                   <textarea id="present-illness" name="present-illness" cols="120" rows="30"></textarea>
