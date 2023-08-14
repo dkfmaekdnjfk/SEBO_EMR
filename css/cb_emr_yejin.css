@@ -123,15 +123,17 @@ text-align 등을 center로 설정하거나 할 필요가 있어 보입니다. *
   font-weight: 1;
   font-size: 1rem;
   padding: 1.25rem 6.25rem 1.25rem 3.125rem;
-  margin: 3.125rem 0 0 1.25rem;
+  margin: 2rem 0 0 1.25rem;
   border-right: 0.0625rem solid #F2F2F2;
+  line-height: 1.8;
 }
 #patientInfoItem > li:last-child {
   border-right: none;
 }
-#li span {
+#patientInfoItem span {
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 /* 예진 탭 */
 /* 환자의 정보를 입력하는 폼 탭입니다. */
