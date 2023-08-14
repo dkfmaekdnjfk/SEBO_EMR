@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Gowun+Dodum&display=swap');
 
 * {
   margin: 0;                /* 마진값 초기화 */
   padding: 0;               /* 패딩값 초기화 */
   box-sizing: border-box;   /* 박스 영역은 테두리까지 지정 */
+  font-family: 'Gowun Dodum', sans-serif;
 }
 /* 텍스트 링크의 밑줄을 감추는 코드입니다. */
 a {
@@ -16,7 +18,10 @@ ul {
 
 #container {
   margin: 0 auto;           /* 화면 중앙에 배치 */
-  width: 1980px;            /* 너비 지정 */
+  width: 123.75rem;         /* 너비 지정 */
+  /* CMT/230812 높이는 꽉 차도록 veiwpoint 높이로 바꿔야 함! */
+  /* height: 100vh; */
+  line-height: 100%;
 }
 /* ***************************************************** */
 /* 헤더 영역 */
@@ -25,35 +30,69 @@ ul {
 header {
   float: left;
   width: 10%;
-  height: 1080px;
+  height: 67.5rem;
   background-color: #6C7DD9;
 }
 /* 로고 영역 */
 #logo {
   width: 100%;
   height: 10%;
-  line-height: 100px;
-  padding-left: 10px;
+  line-height: 6.25rem;
+  padding-left: 0.625rem;
 }
 #logo h1 {
   font-family: 'Diphylleia', serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #fff;
-  text-shadow: 0 -1px 0 #222;
 }
 /* 네비게이션 영역 */
 nav {
   width: 100%;
   height: 50%;
-  background-color: #4158D9;
+}
+/* 링크로 인해 걸린 꾸밈 요소를 삭제하였습니다. */
+#Menu a {
+  text-decoration: none;
+  color: #F2F2F2;
+}
+/* 현재는 일일이 마진을 설정하였는데,
+text-align 등을 center로 설정하거나 할 필요가 있어 보입니다. */
+#Menu li {
+  margin: 2rem 0 4rem 1.2rem ;
+  font-size: 1.6rem;
 }
 /* 헤더 內 푸터 영역 */
 /* 푸터를 따로 넣지 않고 헤더 안 영역에 넣습니다. */
 #footer {
   width: 100%;
   height: 40%;
-  background-color: #2B45D9;
+}
+#footerList {
+  margin-top: 10rem;
+  margin-left: 1.5rem;
+}
+#footerList a {
+  text-decoration: underline;
+  color: #F2F2F2;
+}
+#footerList li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+#alikeGitHub {
+  text-align: left;
+  padding: 1rem 0 0 1rem;
+  margin: auto;
+  margin-top: 2rem;
+  width: 80%;
+  height: 20%;
+  border-radius: 1.825rem;
+  background-color: #4158D9;
+}
+#alikeGitHub h2 {
+  line-height: 1.2;
+  color: #F2F2F2;
 }
 /* ***************************************************** */
 /* 콘텐츠 영역 */
@@ -63,56 +102,95 @@ nav {
 #contents {
   float: right;
   width: 90%;
-  height: 1080px;
+  height: 67.5rem;
   background-color: #F2F2F2;
 }
 /* 환자정보 탭 */
 /* 환자의 기본정보가 표시됩니다. */
 #patientInfoTab {
-  width: 100%;
+  width: 95%;
   height: 15%;
-  margin: 10px;
+  margin: 1.25rem;
+  border-radius: 1.825rem;
   background-color: #2B45D9;
 }
 #patientInfoItem {
-  height: 100px;
+  height: 62.5rem;
 }
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
-/* 패딩과 마진을 좀 더 깔끔히 고쳐야 합니다. */
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
 #patientInfoItem > li {
   float: left;
   color: #F2F2F2;
-  font-weight: 600;
-  font-size: 2em;
-  padding: 80px 100px;
-  padding-left: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 50px;
-  margin-right: 20px;
-  border: 1px solid #222;
+  font-weight: 1;
+  font-size: 1rem;
+  padding: 1.25rem 6.25rem 1.25rem 3.125rem;
+  margin: 3.125rem 0 0 1.25rem;
+  border-right: 0.0625rem solid #F2F2F2;
+}
+#patientInfoItem > li:last-child {
+  border-right: none;
+}
+#li span {
+  font-weight: 200;
+  font-size: 2rem;
 }
 /* 예진 탭 */
 /* 환자의 정보를 입력하는 폼 탭입니다. */
-#yejinForm {
-  margin: 10px;
-  width: 100%;
-  height: 85%;
+
+/* Chat GPT css */
+/* Style the label */
+#wrapper_patient label {
+  display: block;
+  margin: 2rem 0 1.25rem 2.56rem; /* Top, Right, Bottom, Left */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Style the textarea */
+/* textarea의 종류는 두 가지를 잡아야 함.
+크기별로 width 값을 다르게 잡아야 할 듯.
+혹은 javascript로 맞추거나. */
+textarea {
+  width: 90%; /* Set the width to 100% of the parent container */
+  height: 50%; /* Set the height of the textarea */
+  padding: 0 0 0; /* Add some padding inside the textarea */
+  margin: 0 0 0 2.56rem;
+  border: 0.063rem solid #A7B2F2; /* Set the border color */
+  border-radius: 0.313rem; /* Round the corners of the textarea */
+  resize: none; /* Allow vertical resizing */
+  font-size: 1rem; /* Set the font size */
   background-color: #A7B2F2;
 }
-.cheif-complain { grid-area: cheif-complain; }
-.onset-date { grid-area: onset-date; }
-.present-illness { grid-area: present-illness; }
-.past-history { grid-area: past-history; }
-.family-history { grid-area: family-history; }
-.social-history { grid-area: social-history; }
+
+/* Change the color inside the textarea */
+textarea::placeholder {
+  color: #A7B2F2; /* Placeholder text color */
+}
+
+/* Change the border color when the textarea is focused */
+textarea:focus {
+  border-color: #007bff; /* Change to the desired focus color */
+  outline: none; /* Remove the default focus outline */
+}
+
+/* Chat GPT css */
+
+#yejinForm {
+  margin: 0.625rem;
+  width: 100%;
+  height: 85%;
+}
+#cheif-complain { grid-area: cheif-complain; }
+#onset-date { grid-area: onset-date; }
+#present-illness { grid-area: present-illness; }
+#past-history { grid-area: past-history; }
+#family-history { grid-area: family-history; }
+#social-history { grid-area: social-history; }
 /* 환자 정보 폼을 그리드 템플릿으로 제작하기 위해
 전체를 감싸는 wrapper를 생성하였습니다. */
 #wrapper_patient {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 200px);
+    grid-template-columns: repeat(3, 36rem);
+    grid-template-rows: repeat(4, 12rem);
     grid-template-areas: 
       "cheif-complain cheif-complain onset-date"
       "present-illness present-illness past-history"
@@ -121,8 +199,30 @@ nav {
     ;
 }
 #wrapper_patient > div {
-  background-color: #4158D9;
-  border: 1px solid #222;
-  margin: 10px;
+  background-color: #A7B2F2;
+  border: none;
+  margin: 0.625rem;
+  border-radius: 2rem;
 }
 /* 이전 과정, 초기화, 저장, 다음 과정 버튼을 아래에 만들어야 합니다. */
+/* Apply styles to the navigation buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

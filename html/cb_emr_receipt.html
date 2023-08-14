@@ -4,42 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>예진</title>
-  <link rel="stylesheet" href="/css/cb_emr_bonjin.css">
+  <link rel="stylesheet" href="/css/cb_emr_yejin.css">
 </head>
 <body>
   <div id="container">
     <header>
       <div id="logo">
-        <a href="cb_emr_layout.html">
+        <a href="cb_emr_yejin.html">
           <h1>세상의 보배</h1>
+          <!-- <br> 태그로 줄바꿈을 하면 너무 크게 나뉘는 문제가 있음 
+          <br> 태그의 문제라기보단, -->
         </a>
+        <hr/>
       </div>
-      <nav></nav>
+      <nav>
+        <ul id="Menu">
+          <a href="./cb_emr_cheif.html"><li id="menuCheif">🧑‍💼 관리자</li></a>
+          <a href="./cb_emr_analysis.html"><li id="menuAnaylsis">💾 기록/분석</li></a>
+          <a href="./cb_emr_patient.html"><li id="menuPatient">🤒 환자관리</li></a>
+          <a href="./cb_emr_receipt.html"><li id="menuReceipt">🤗 접수</li></a>
+          <a href="./cb_emr_yejin.html"><li id="menuYejin">❓ 예진</li></a>
+          <a href="./cb_emr_bonjin.html"><li id="menuBonjin">🥼 본진</li></a>
+        </ul>
+        <hr/>
+      </nav>
       <div id="footer">
-
+        <ul id="footerList">
+          <a href="#"><li>FAQ</li></a>
+          <a href="#"><li>고객센터</li></a>
+          <a href="#"><li>가이드</li></a>
+        </ul>
+        <a href="#">
+          <div id="alikeGitHub"><h2>Go<br>Herb-Hub</h2></div>
+        </a>
       </div>
     </header>
     <div id="contents">
-      <div id="patientInfoTab">
-        <ul id="patientInfoItem">
-          <!-- 환자정보는 접수에서 가져온 정보를 이곳에 표시해야 함 -->
-          <li id="patinetInfoName">성함</li>
-          <li id="patientInfoGender">성별</li>
-          <li id="patientInfoAge">나이</li>
-          <li id="patientInfoAddress">주소</li>
-          <li id="patientInfoPhone">전화</li>
-        </ul>
-      </div>
-      <div id="yejinTab">
-        <form id="yejinForm">
-          <div id="buttons">
-              <input type="reset" value="초기화">
-              <input type="submit" value="다음">
-          </div>
-        </form>
-      </div>
     </div>
-    <footer></footer>
   </div>
 </body>
 </html>
