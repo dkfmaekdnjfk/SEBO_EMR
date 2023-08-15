@@ -6,11 +6,7 @@
   <title>예진</title>
   <link rel="stylesheet" href="/css/cb_emr_yejin.css">
   <script>
-    function submitFormAndNavigate() {
-      const form = document.getElementById('myForm');
-      form.submit();
-      // Add code to navigate to the next page
-    }
+
   </script>
 </head>
 <body>
@@ -61,35 +57,35 @@
         <form id="yejinForm">
             <div id="wrapper_patient">
               <!-- 주소증은 텍스트를 입력해서 추가할 수 있도록 수정하기 -->
-              <div id="cheif-complain">
+              <div class="patientYejinTab" id="cheif-complain">
                   <label for="cheif-complain">주소증</label>
-                  <textarea type="text" id="cheif-complain-text" name="cheif-complain"></textarea>
+                  <textarea type="text" class="patientYejinText" id="cheif-complain-text" name="cheif-complain"></textarea>
               </div>
-              <div id="onset-date">
+              <div class="patientYejinTab" id="onset-date">
                   <!--
                   CMT/230812 달력에서 날짜를 선택하는 것은 선택사항으로 넣을 수 있게 하자.
                   <label for="onset-date">발병일</label>
                   <input type="date" id="onset-date" name="onset-date">
                   -->
                   <label for="onset-date-word">발병일</label>
-                  <textarea id="onset-date-word-text" name="onset-date-word"></textarea>
+                  <textarea class="patientYejinText" id="onset-date-word-text" name="onset-date-word"></textarea>
               </div>
               <!-- 현병력은 주소증의 번호와 그 외의 목록을 연동하기 -->
-              <div id="present-illness">
+              <div class="patientYejinTab" id="present-illness">
                   <label for="present-illness">현병력</label>
-                  <textarea id="present-illness-text" name="present-illness"></textarea>
+                  <textarea class="patientYejinText" id="present-illness-text" name="present-illness"></textarea>
               </div>
-              <div id="past-history">
+              <div class="patientYejinTab" id="past-history">
                   <label for="past-history">과거력</label>
-                  <textarea id="past-history-text" name="past-history"></textarea>
+                  <textarea class="patientYejinText" id="past-history-text" name="past-history"></textarea>
               </div>
-              <div id="family-history">
+              <div class="patientYejinTab" id="family-history">
                   <label for="family-history">가족력</label>
-                  <textarea id="family-history-text" name="family-history"></textarea>
+                  <textarea class="patientYejinText" id="family-history-text" name="family-history"></textarea>
               </div>
-              <div id="social-history">
+              <div class="patientYejinTab" id="social-history">
                   <label for="social-history">사회력</label>
-                  <textarea id="social-history-text" name="social-history"></textarea>
+                  <textarea class="patientYejinText" id="social-history-text" name="social-history"></textarea>
               </div>
             </div>
             <div class="nav-buttons">

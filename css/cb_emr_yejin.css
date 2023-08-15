@@ -171,7 +171,6 @@ textarea::placeholder {
 
 /* Change the border color when the textarea is focused */
 textarea:focus {
-  border-color: #007bff; /* Change to the desired focus color */
   outline: none; /* Remove the default focus outline */
 }
 
