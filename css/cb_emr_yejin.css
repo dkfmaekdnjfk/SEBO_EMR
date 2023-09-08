@@ -15,6 +15,9 @@ a {
 ul {
   list-style: none;
 }
+body {
+  background-color: #F2F2F2;
+}
 
 #container {
   margin: 0 auto;           /* 화면 중앙에 배치 */
@@ -67,7 +70,7 @@ text-align 등을 center로 설정하거나 할 필요가 있어 보입니다. *
 /* 푸터를 따로 넣지 않고 헤더 안 영역에 넣습니다. */
 #footer {
   width: 100%;
-  height: 40%;
+  height: 20%;
 }
 #footerList {
   margin-top: 9rem;
@@ -87,7 +90,7 @@ text-align 등을 center로 설정하거나 할 필요가 있어 보입니다. *
   margin: auto;
   margin-top: 2rem;
   width: 80%;
-  height: 20%;
+  height: 40%;
   border-radius: 1.825rem;
   background-color: #4158D9;
 }
@@ -109,7 +112,7 @@ text-align 등을 center로 설정하거나 할 필요가 있어 보입니다. *
 /* 환자정보 탭 */
 /* 환자의 기본정보가 표시됩니다. */
 #patientInfoTab {
-  width: 95%;
+  width: 96%;
   height: 15%;
   margin: 1.25rem;
   border-radius: 1.825rem;
@@ -153,7 +156,6 @@ text-align 등을 center로 설정하거나 할 필요가 있어 보입니다. *
 크기별로 width 값을 다르게 잡아야 할 듯.
 혹은 javascript로 맞추거나. */
 textarea {
-  width: 90%; /* Set the width to 100% of the parent container */
   height: 50%; /* Set the height of the textarea */
   padding: 0 0 0; /* Add some padding inside the textarea */
   margin: 0 0 0 2.56rem;
@@ -162,6 +164,12 @@ textarea {
   resize: none; /* Allow vertical resizing */
   font-size: 1rem; /* Set the font size */
   background-color: #A7B2F2;
+}
+.long-text {
+  width: 93%; /* Set the width to 100% of the parent container */
+}
+.short-text {
+  width: 80%; /* Set the width to 100% of the parent container */
 }
 
 /* Change the color inside the textarea */
@@ -189,6 +197,8 @@ textarea:focus {
 #social-history { grid-area: social-history; }
 /* 환자 정보 폼을 그리드 템플릿으로 제작하기 위해
 전체를 감싸는 wrapper를 생성하였습니다. */
+/* CMT230908 그리드의 문제인지
+병력카드가 컨테이너 밖으로 삐져 나옵니다. */
 #wrapper_patient {
     display: grid;
     grid-template-columns: repeat(3, 36rem);
